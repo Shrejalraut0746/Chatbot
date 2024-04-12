@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    max-height: 70vh; /* Limit message container height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add padding */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
   }
-}
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure input container takes full width */
+    padding: 10px; /* Add padding */
+    background-color: #87ceeb; /* Skyish blue light */
+  }
+  
+  input[type="text"] {
+    flex: 1; /* Take remaining width */
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 20px; /* Match chatbot input styling */
+    border: none;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
